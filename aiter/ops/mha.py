@@ -952,7 +952,7 @@ def cmdGenFunc_mha_varlen_fwd(
         else:
             md_name += "_nbias"
             filter_fwd_splitkv2 += "_nbias*"
-        if not is_causal and window_size_left == -1 and window_size_right == -1:
+        if not causal and window_size_left == -1 and window_size_right == -1:
             md_name += "_nmask"
             filter_fwd_splitkv2 += "_nmask*"
         else:
